@@ -1,0 +1,38 @@
+﻿<Window x:Class="LoginWPF.UI.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LoginWPF.UI"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login" Height="250" Width="300">
+        
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+
+            <Image Source="/Resources/User.png" Height="50"></Image>
+
+            <Label Content="Nombre de Usuario"></Label>
+            <TextBox x:Name="nombreUsuarioTextBox"></TextBox>
+            <Label Content="Clave"></Label>
+            <PasswordBox x:Name="clavePasswordBox"></PasswordBox>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button x:Name="CancelarButton" Click="CancelarButton_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Cancelar.png" Height="18"></Image>
+                        <Label Content=" Cancelar "></Label>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="ingresarButton" Margin="90,0,0,0" Click="ingresarButton_Click" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/Entrar.png" Height="18"></Image>
+                        <Label Content=" Ingresar "></Label>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>
